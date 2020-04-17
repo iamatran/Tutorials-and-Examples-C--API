@@ -1,0 +1,4 @@
+@using Intro_to_WebAPI___One_of_the_most_powerful_project_types_in_C.Areas.HelpPage.ModelDescriptions
+@model KeyValuePairModelDescription
+Pair of @Html.DisplayFor(m => Model.KeyModelDescription.ModelType, "ModelDescriptionLink", new { modelDescription = Model.KeyModelDescription }) [key]
+and @Html.DisplayFor(m => Model.ValueModelDescription.ModelType, "ModelDescriptionLink", new { modelDescription = Model.ValueModelDescription }) [value]
