@@ -10,6 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+// using StudentApplication.API.Models;
+// using Microsoft.EntityFrameworkCore.SqlServer;
 
 namespace Tutorial_Gowtham
 {
@@ -26,6 +29,7 @@ namespace Tutorial_Gowtham
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<LibraryContext>(op => op.UseSqlServer(Configuration["ConnectionString:BookStoreDB"])); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
